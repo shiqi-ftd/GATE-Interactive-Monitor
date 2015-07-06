@@ -21,6 +21,15 @@ div {
 	color: #ffffff;
 }
 
+#info {
+	float: left;
+	margin-left: 250px;
+	padding-top: 35px;
+	font-size: 15px;
+	font-family: Verdana, sans-serif;
+	color: #ffffff;
+}
+
 #email {
 	float: right;
 	margin-right: 5px;
@@ -76,7 +85,7 @@ a:hover {
 	position: relative;
 	float: right;
 	margin-top: 100px;
-	width: 85%;
+	width: 84.5%;
 	height: 700px;
 	background-color: #F4EBC3;
 	margin-bottom: 10px;
@@ -117,14 +126,14 @@ a:active {
 }
 
 .myButton {
-	background-color: #44c767;
+	background-color: #B9D7D9;
 	-moz-border-radius: 28px;
 	-webkit-border-radius: 28px;
 	border-radius: 28px;
 	border: 1px solid #18ab29;
 	display: inline-block;
 	cursor: pointer;
-	color: #ffffff;
+	color: black;
 	font-family: Arial;
 	font-size: 17px;
 	padding: 16px 31px;
@@ -133,7 +142,7 @@ a:active {
 }
 
 .myButton:hover {
-	background-color: #5cbf2a;
+	background-color: #B1D7F9;
 }
 
 .myButton:active {
