@@ -9,19 +9,20 @@
 </head>
 <body>
 	<div id="header">
-		<img id="logo" src="./images/logo.gif" hspace=15 vspace=15>
-	
+		<img id="logo" src="./images/logo.gif" align="left">
+
 		<p id="name"></p>
-		<a href="mailto:szhong4@vols.utk.edu">
-			<p id="email">Mail to Shiqi Zhong</p>
-		</a>
+		<a href="mailto:szhong4@vols.utk.edu" id="email">Mail to Shiqi
+			Zhong</a>
 		<p id="info">
-			<% out.println("Your IP address is: " + request.getRemoteAddr()); %>
+			<%
+				out.println("Your IP address is: " + request.getRemoteAddr());
+			%>
 			<br> Today's date:
 			<%=(new java.util.Date()).toLocaleString()%>
 		</p>
 		<br>
-	
+
 	</div>
 
 	<div class="left">
@@ -54,6 +55,11 @@
 			Learn more about <a
 				href="http://wiki.opengatecollaboration.org/index.php/Users_Guide_V7.1">GATE</a>
 		</p>
+		<br>
+		<p>
+			Learn more about <a href="https://root.cern.ch/drupal/">ROOT</a>
+		</p>
+
 	</div>
 
 	<div id="footer">

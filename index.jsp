@@ -10,19 +10,18 @@
 </head>
 <body>
 	<div id="header">
-		<img id="logo" src="./images/logo.gif" hspace=15 vspace=15>
-	
+		<img id="logo" src="./images/logo.gif" align="left">
+
 		<p id="name"></p>
-		<a href="mailto:szhong4@vols.utk.edu">
-			<p id="email">Mail to Shiqi Zhong</p>
-		</a>
+		<a href="mailto:szhong4@vols.utk.edu" id="email">Mail to Shiqi
+			Zhong</a>
 		<p id="info">
 			<% out.println("Your IP address is: " + request.getRemoteAddr()); %>
 			<br> Today's date:
 			<%=(new java.util.Date()).toLocaleString()%>
 		</p>
 		<br>
-	
+
 	</div>
 
 	<div class="left">
@@ -58,8 +57,9 @@
 			<li>Light weight: <br>Given the central-server's interface,
 				there's no need to install the whole system on local devices.
 			</li>
-			<li>Portable: <br> The end user could control and monitor
-				the simulation everywhere at anytime if there is a Internet access.
+			<li>Portable: <br> There is no platform limit. The end user
+				could control and monitor the simulation everywhere at anytime if
+				there is a Internet access.
 			</li>
 			<li>Easy and Fast to set up: <br>Given the simulation
 				templates, it is much easier and quicker for the end to set up the

@@ -10,19 +10,20 @@
 </head>
 <body>
 	<div id="header">
-		<img id="logo" src="./images/logo.gif" hspace=15 vspace=15>
-	
+		<img id="logo" src="./images/logo.gif" align="left">
+
 		<p id="name"></p>
-		<a href="mailto:szhong4@vols.utk.edu">
-			<p id="email">Mail to Shiqi Zhong</p>
-		</a>
+		<a href="mailto:szhong4@vols.utk.edu" id="email">Mail to Shiqi
+			Zhong</a>
 		<p id="info">
-			<% out.println("Your IP address is: " + request.getRemoteAddr()); %>
+			<%
+				out.println("Your IP address is: " + request.getRemoteAddr());
+			%>
 			<br> Today's date:
 			<%=(new java.util.Date()).toLocaleString()%>
 		</p>
 		<br>
-	
+
 	</div>
 
 	<div class="left">
@@ -43,7 +44,10 @@
 
 	<div class="right">
 		<h4>Simulation Result</h4>
-		<a href="#" class="myButton">Server Status:  </a>
+		<a href="#" class="myButton">Current Server Status: </a> <br> <br>
+		<br> <a href="#" class="myButton">View macro file: </a> <br>
+		<br> <br> <a href="#" class="myButton">View Analysed Result:
+		</a>
 	</div>
 
 	<div id="footer">
