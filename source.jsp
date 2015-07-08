@@ -27,7 +27,7 @@
 
 	<div class="left">
 		<h3>
-			<a href="./index.jsp"><b>Introduction</b></a>
+			<a href="./intro.jsp"><b>Introduction</b></a>
 		</h3>
 		<h3>
 			<a href="./simulation.jsp"><strong>Run Simulation</strong></a>

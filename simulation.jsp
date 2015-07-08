@@ -28,7 +28,7 @@
 
 	<div class="left">
 		<h3>
-			<a href="./index.jsp"><b>Introduction</b></a>
+			<a href="./intro.jsp"><b>Introduction</b></a>
 		</h3>
 		<h3>
 			<a href="./simulation.jsp"><font color="red"><em>Run
@@ -320,7 +320,7 @@
 			} else if (text === "Gamma Camera") {
 				$("#Cylindrical").hide();
 				$("#Gamma").show();
-			}else{
+			} else {
 				$("#Cylindrical").hide();
 				$("#Gamma").hide();
 
