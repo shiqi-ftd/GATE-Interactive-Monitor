@@ -16,7 +16,9 @@
 		<a href="mailto:szhong4@vols.utk.edu" id="email">Mail to Shiqi
 			Zhong</a>
 		<p id="info">
-			<% out.println("Your IP address is: " + request.getRemoteAddr()); %>
+			<%
+				out.println("Your IP address is: " + request.getRemoteAddr());
+			%>
 			<br> Today's date:
 			<%=(new java.util.Date()).toLocaleString()%>
 		</p>
@@ -62,8 +64,8 @@
 				there is a Internet access.
 			</li>
 			<li>Easy and Fast to set up: <br>Given the simulation
-				templates, it is much easier and quicker for the end to set up the
-				simulation environment.
+				templates, it is much easier and quicker for the end user to set up
+				the simulation environment.
 			</li>
 			<li>Detailed: <br>Within each simulation template, the end
 				user remains the freedom of setting up multiple parameters.

@@ -46,7 +46,7 @@
 		<br>
 		<p>
 			This is an open source ongoing project written with HTML, CSS, AJAX,
-			JavaScript, Java Server Page. <br> <br>To view the source
+			JavaScript, Java Server Page and JAVA. <br> <br>To view the source
 			code from <a
 				href="https://github.com/szhong4/GATE-Interactive-Monitor">GitHub</a>
 		</p>

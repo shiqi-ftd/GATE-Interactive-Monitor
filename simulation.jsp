@@ -62,7 +62,8 @@
 		</p>
 		<div id="Cylindrical" style="display: none">
 			<p>
-				ViewPointThetaPhi: <select>
+				ViewPointThetaPhi: <select id="ViewPointThetaPhi"
+					onclick="send_parameter('#ViewPointThetaPhi')">
 					<option value="0"></option>
 					<option value="1">0 90</option>
 					<option value="2">90 0</option>
@@ -73,7 +74,8 @@
 			</p>
 
 			<p>
-				VisuOnOff: <select>
+				VisuOnOff: <select id="VisuOnOff"
+					onclick="send_parameter('#VisuOnOff')">
 					<option value="0"></option>
 					<option value="1">novisu</option>
 					<option value="2">visu</option>
@@ -81,7 +83,8 @@
 			</p>
 
 			<p>
-				SourceActivity: <select>
+				SourceActivity: <select id="SourceActivity"
+					onclick="send_parameter('#SourceActivity')">
 					<option value="0"></option>
 					<option value="1">100. Bq</option>
 					<option value="2">1000. Bq</option>
@@ -92,14 +95,16 @@
 			</p>
 
 			<p>
-				Nb_Detectors: <select>
+				Nb_Detectors: <select id="Nb_Detectors"
+					onclick="send_parameter('#Nb_Detectors')">
 					<option value="0"></option>
 					<option value="1">2</option>
 					<option value="2">64</option>
 				</select>
 			</p>
 			<p>
-				CrystalMaterial: <select>
+				CrystalMaterial: <select id="CrystalMaterial"
+					onclick="send_parameter('#CrystalMaterial')">
 					<option value="0"></option>
 					<option value="1">LSO</option>
 					<option value="2">BGO</option>
@@ -107,7 +112,8 @@
 				</select>
 			</p>
 			<p>
-				PhantomMaterial: <select>
+				PhantomMaterial: <select id="PhantomMaterial"
+					onclick="send_parameter('#PhantomMaterial')">
 					<option value="0"></option>
 					<option value="1">Water</option>
 					<option value="2">Air</option>
@@ -120,7 +126,7 @@
 			</p>
 
 			<p>
-				PhanRmax: <select>
+				PhanRmax: <select id="PhanRmax" onclick="send_parameter('#PhanRmax')">
 					<option value="0"></option>
 					<option value="1">18mm</option>
 					<option value="2">20mm</option>
@@ -128,7 +134,7 @@
 				</select>
 			</p>
 			<p>
-				PhanRmin: <select>
+				PhanRmin: <select id="PhanRmin" onclick="send_parameter('#PhanRmin')">
 					<option value="0"></option>
 					<option value="1">13mm</option>
 					<option value="2">15mm</option>
@@ -136,13 +142,15 @@
 				</select>
 			</p>
 			<p>
-				Phan_Source_Pos: <select>
+				Phan_Source_Pos: <select id="Phan_Source_Pos"
+					onclick="send_parameter('#Phan_Source_Pos')">
 					<option value="0"></option>
 					<option value="1">0.0 0.0 0.0 mm</option>
 				</select>
 			</p>
 			<p>
-				SourceVolMaterial: <select>
+				SourceVolMaterial: <select id="SourceVolMaterial"
+					onclick="send_parameter('#SourceVolMaterial')">
 					<option value="0"></option>
 					<option value="1">Water</option>
 					<option value="2">Air</option>
@@ -152,7 +160,8 @@
 				</select>
 			</p>
 			<p>
-				SourceEnergy: <select>
+				SourceEnergy: <select id="SourceEnergy"
+					onclick="send_parameter('#SourceEnergy')">
 					<option value="0"></option>
 					<option value="1">511 keV</option>
 					<option value="2">100 keV</option>
@@ -168,7 +177,8 @@
 		</div>
 		<div id="Gamma" style="display: none">
 			<p>
-				ViewPointThetaPhi: <select>
+				ViewPointThetaPhi: <select id="ViewPointThetaPhi2"
+					onclick="send_parameter('#ViewPointThetaPhi2')">
 					<option value="0"></option>
 					<option value="1">0 90</option>
 					<option value="2">90 0</option>
@@ -177,14 +187,15 @@
 				</select>
 			</p>
 			<p>
-				VisuOnOff: <select>
+				VisuOnOff: <select id="VisuOnOff2" onclick="send_parameter('#VisuOnOff2')">
 					<option value="0"></option>
 					<option value="1">novisu</option>
 					<option value="2">visu</option>
 				</select>
 			</p>
 			<p>
-				SourceActivity: <select>
+				SourceActivity: <select id="SourceActivity2"
+					onclick="send_parameter('#SourceActivity2')">
 					<option value="0"></option>
 					<option value="1">100 Bq</option>
 					<option value="2">1000. Bq</option>
@@ -193,21 +204,22 @@
 				</select>
 			</p>
 			<p>
-				CameraType: <select>
+				CameraType: <select id="CameraType2" onclick="send_parameter('#CameraType2')">
 					<option value="0"></option>
 					<option value="1">camera_Tc</option>
 					<option value="2">camera_I_131</option>
 				</select>
 			</p>
 			<p>
-				x_placement: <select>
+				x_placement: <select id="x_placement2" onclick="send_parameter('#x_placement2')">
 					<option value="0"></option>
 					<option value="1">20.0</option>
 				</select>
 			</p>
 
 			<p>
-				CollimatorMaterial: <select>
+				CollimatorMaterial: <select id="CollimatorMaterial2"
+					onclick="send_parameter('#CollimatorMaterial2')">
 					<option value="0"></option>
 					<option value="1">Lead</option>
 					<option value="2">Vacuum</option>
@@ -219,7 +231,8 @@
 				</select>
 			</p>
 			<p>
-				CrystalMaterial: <select>
+				CrystalMaterial: <select id="CrystalMaterial2"
+					onclick="send_parameter('#CrystalMaterial2')">
 					<option value="0"></option>
 					<option value="1">NaI</option>
 					<option value="2">BGO</option>
@@ -231,7 +244,8 @@
 				</select>
 			</p>
 			<p>
-				PhantomMaterial: <select>
+				PhantomMaterial: <select id="PhantomMaterial2"
+					onclick="send_parameter('#PhantomMaterial2')">
 					<option value="0"></option>
 					<option value="1">Plexiglass</option>
 					<option value="2">Air</option>
@@ -244,7 +258,7 @@
 				</select>
 			</p>
 			<p>
-				PhanRmax: <select>
+				PhanRmax: <select id="PhanRmax2" onclick="send_parameter('#PhanRmax2')">
 					<option value="0"></option>
 					<option value="1">50.0 mm</option>
 					<option value="2">52.0 mm</option>
@@ -252,7 +266,7 @@
 				</select>
 			</p>
 			<p>
-				PhanRmin: <select>
+				PhanRmin: <select id="PhanRmin2" onclick="send_parameter('#PhanRmin2')">
 					<option value="0"></option>
 					<option value="1">49.5 mm</option>
 					<option value="2">48.0 mm</option>
@@ -260,7 +274,8 @@
 				</select>
 			</p>
 			<p>
-				SourceVolMaterial: <select>
+				SourceVolMaterial: <select id="SourceVolMaterial2"
+					onclick="send_parameter('#SourceVolMaterial2')">
 					<option value="0"></option>
 					<option value="1">Plexiglass</option>
 					<option value="2">Air</option>
@@ -270,7 +285,7 @@
 				</select>
 			</p>
 			<p>
-				SourceType: <select>
+				SourceType: <select id="SourceType2" onclick="send_parameter('#SourceType2')">
 					<option value="0"></option>
 					<option value="1">sources_gamma_3</option>
 					<option value="2">sources_Y90_histo</option>
@@ -281,7 +296,8 @@
 				</select>
 			</p>
 			<p>
-				SourceEnergy: <select>
+				SourceEnergy: <select id="SourceEnergy2"
+					onclick="send_parameter('#SourceEnergy2')">
 					<option value="0"></option>
 					<option value="1">140 keV</option>
 					<option value="2">364 keV</option>
@@ -309,7 +325,7 @@
 
 	<script>
 		function show_option() {
-			// Tested on Chrome and Safari, has minor bug on Chrome.
+			// Tested on Chrome and Safari, bug has fixed
 			var text = $("#simu_type option:selected").text();
 			if (text === "Cylindrical PET") {
 				$("#Cylindrical").show();
@@ -326,6 +342,15 @@
 
 			}
 
+		}
+		
+		function send_parameter(thisObj) {
+			var type = $(thisObj).parent().parent().attr('id');
+			var name = $(thisObj).attr('id');
+			//var id = $(this).children(":selected").attr("id");
+			var text = $("option:selected", thisObj).text();
+			//alert($("#choose_paramter:parent"));
+			alert(type + "," + name +"," + text);
 		}
 	</script>
 </body>
