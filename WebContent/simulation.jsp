@@ -1,3 +1,4 @@
+<%@ page import= "gate_java_pack.* "%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -307,6 +308,8 @@
 				</select>
 			</p>
 		</div>
+		<div id="myDiv"><h2>Change</h2></div>
+		
 		<a href="./result.jsp" class="myButton">Start Simulation </a>
 
 
@@ -323,7 +326,7 @@
 	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 	<script type="text/javascript" src="scripts/d3.v3.min.js"></script>
 
-	<script>
+	<script type="text/javascript">
 		function show_option() {
 			// Tested on Chrome and Safari, bug has fixed
 			var text = $("#simu_type option:selected").text();
@@ -350,7 +353,27 @@
 			//var id = $(this).children(":selected").attr("id");
 			var text = $("option:selected", thisObj).text();
 			//alert($("#choose_paramter:parent"));
-			alert(type + "," + name +"," + text);
+			//alert(type + "," + name +"," + text);
+			var cmd=type + "," + name +"," + text;
+			//var cmdobj={"command": cmd};
+			
+			//alert(cmdobj.command);
+/* 			$.ajax({
+		        type: "post",
+	            data: cmdobj,
+	            dataType: "json",
+	           //url:"./",
+		        success: function (data) {
+		            //console.log(data);
+		        	alert(data.command);
+		        },
+		        error: function(data) {
+		            alert("Error"+data);
+		            //console.log(data);
+		        }
+			});
+ */		
+
 		}
 	</script>
 </body>

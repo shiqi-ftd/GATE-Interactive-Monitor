@@ -12,10 +12,9 @@
 		String password = "password";
 		try {
 			name = request.getParameter("username");
-			password = request.getParameter("password");			
-	if ((name.equals("szhong4") && password.equals("1234")) || (name.equals("jens") && password.equals("1234"))) {
-
-
+			password = request.getParameter("password");
+			if ((name.equals("szhong4") && password.equals("1234"))
+					|| (name.equals("jens") && password.equals("1234"))) {
 	%>
 	<jsp:forward page="intro.jsp">
 		<jsp:param name="username" value="<%=name%>" />

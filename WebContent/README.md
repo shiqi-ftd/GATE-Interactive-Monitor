@@ -12,7 +12,7 @@ Portable:
 The end user could control and monitor the simulation everywhere at anytime if there is a Internet access.
 
 Easy and Fast to set up: 
-Given the simulation templates, it is much easier and quicker for the end user to set up the simulation environment.
+Given the simulation templates, it is much easier and quicker for the end to set up the simulation environment.
 
 
 Detailed: 
