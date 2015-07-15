@@ -17,7 +17,7 @@
 					|| (name.equals("jens") && password.equals("1234"))) {
 	%>
 	<jsp:forward page="intro.jsp">
-		<jsp:param name="username" value="<%=name%>" />
+	<jsp:param name="username" value="<%=name%>" />
 	</jsp:forward>
 	<%
 		} else {

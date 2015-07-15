@@ -13,18 +13,26 @@ public class set_param {
 	String type;
 	String parm;
 	String value;
-
-	set_param(String params[]) {
+	String path;
+	
+	public set_param(String params[], String pathtofile) {
 		type = params[0];
 		parm = params[1];
 		value = params[2];
+		path=pathtofile;
 	}
 
-	void set_conf(set_param sp) throws IOException {
-		BufferedReader file = new BufferedReader(new FileReader(
-				System.getProperty("user.dir") + '\\' + "WebContent\\conf"
-						+ '\\' + sp.type + '\\' + "configuration.mac"));
-		String line;
+	public void set_conf(set_param sp) throws IOException {
+
+		 BufferedReader file = new BufferedReader(new FileReader(
+		 sp.path + '\\' + "WebContent\\conf" + '\\' +
+		 sp.type + '\\' + "configuration.mac"));
+		
+/*		BufferedReader file = new BufferedReader(new FileReader("C:" + '\\'
+				+ "Users" + '\\' + "szhong4" + '\\' + "Desktop" + '\\'
+				+ "GATE-Interactive-Monitor" + '\\' + "WebContent\\conf" + '\\'
+				+ sp.type + '\\' + "configuration.mac"));
+*/		String line;
 		String input = "";
 		while ((line = file.readLine()) != null) {
 			if (line.contains(sp.parm)) {
@@ -38,11 +46,15 @@ public class set_param {
 		System.out.println(input);
 
 		// overwrite the conf file.
-		File cf = new File(System.getProperty("user.dir") + '\\'
+
+		 File cf = new File(sp.path + '\\' +
+		 "WebContent\\conf" + '\\' + sp.type + '\\' + "configuration.mac");
+		/// false to overwrite.
+/*		File cf = new File("C:" + '\\' + "Users" + '\\' + "szhong4" + '\\'
+				+ "Desktop" + '\\' + "GATE-Interactive-Monitor" + '\\'
 				+ "WebContent\\conf" + '\\' + sp.type + '\\'
 				+ "configuration.mac");
-		// false to overwrite.
-		FileWriter wf = new FileWriter(cf, false);
+*/		FileWriter wf = new FileWriter(cf, false);
 		wf.write(input);
 		wf.close();
 	}
@@ -58,11 +70,11 @@ public class set_param {
 			}
 
 			String[] params = cmd.split(",");
-			params[1] = params[1].replace("1", "");
+			params[1] = params[1].replace("2", "");
 
-			set_param sp = new set_param(params);
+/*			set_param sp = new set_param(params);
 			sp.set_conf(sp);
-			/*
+*/			/*
 			 * System.out.print(System.getProperty("user.dir") + '\\' +
 			 * "WebContent\\conf" + '\\' + sp.type + '\\' +
 			 * "configuration.mac");

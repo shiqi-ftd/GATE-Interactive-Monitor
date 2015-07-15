@@ -1,4 +1,3 @@
-<%@ page import= "gate_java_pack.* "%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,7 +126,8 @@
 			</p>
 
 			<p>
-				PhanRmax: <select id="PhanRmax" onclick="send_parameter('#PhanRmax')">
+				PhanRmax: <select id="PhanRmax"
+					onclick="send_parameter('#PhanRmax')">
 					<option value="0"></option>
 					<option value="1">18mm</option>
 					<option value="2">20mm</option>
@@ -135,7 +135,8 @@
 				</select>
 			</p>
 			<p>
-				PhanRmin: <select id="PhanRmin" onclick="send_parameter('#PhanRmin')">
+				PhanRmin: <select id="PhanRmin"
+					onclick="send_parameter('#PhanRmin')">
 					<option value="0"></option>
 					<option value="1">13mm</option>
 					<option value="2">15mm</option>
@@ -188,7 +189,8 @@
 				</select>
 			</p>
 			<p>
-				VisuOnOff: <select id="VisuOnOff2" onclick="send_parameter('#VisuOnOff2')">
+				VisuOnOff: <select id="VisuOnOff2"
+					onclick="send_parameter('#VisuOnOff2')">
 					<option value="0"></option>
 					<option value="1">novisu</option>
 					<option value="2">visu</option>
@@ -205,14 +207,16 @@
 				</select>
 			</p>
 			<p>
-				CameraType: <select id="CameraType2" onclick="send_parameter('#CameraType2')">
+				CameraType: <select id="CameraType2"
+					onclick="send_parameter('#CameraType2')">
 					<option value="0"></option>
 					<option value="1">camera_Tc</option>
 					<option value="2">camera_I_131</option>
 				</select>
 			</p>
 			<p>
-				x_placement: <select id="x_placement2" onclick="send_parameter('#x_placement2')">
+				x_placement: <select id="x_placement2"
+					onclick="send_parameter('#x_placement2')">
 					<option value="0"></option>
 					<option value="1">20.0</option>
 				</select>
@@ -259,7 +263,8 @@
 				</select>
 			</p>
 			<p>
-				PhanRmax: <select id="PhanRmax2" onclick="send_parameter('#PhanRmax2')">
+				PhanRmax: <select id="PhanRmax2"
+					onclick="send_parameter('#PhanRmax2')">
 					<option value="0"></option>
 					<option value="1">50.0 mm</option>
 					<option value="2">52.0 mm</option>
@@ -267,7 +272,8 @@
 				</select>
 			</p>
 			<p>
-				PhanRmin: <select id="PhanRmin2" onclick="send_parameter('#PhanRmin2')">
+				PhanRmin: <select id="PhanRmin2"
+					onclick="send_parameter('#PhanRmin2')">
 					<option value="0"></option>
 					<option value="1">49.5 mm</option>
 					<option value="2">48.0 mm</option>
@@ -286,7 +292,8 @@
 				</select>
 			</p>
 			<p>
-				SourceType: <select id="SourceType2" onclick="send_parameter('#SourceType2')">
+				SourceType: <select id="SourceType2"
+					onclick="send_parameter('#SourceType2')">
 					<option value="0"></option>
 					<option value="1">sources_gamma_3</option>
 					<option value="2">sources_Y90_histo</option>
@@ -308,9 +315,14 @@
 				</select>
 			</p>
 		</div>
-		<div id="myDiv"><h2>Change</h2></div>
-		
-		<a href="./result.jsp" class="myButton">Start Simulation </a>
+		<div id="myDiv">
+			<h2>Change</h2>
+		</div>
+
+		<a href="./result.jsp" class="myButton">Start Simulation </a> <a
+			class="myButton" id="btn_get_simulation_status">Start Simulation</a>
+
+
 
 
 	</div>
@@ -346,7 +358,7 @@
 			}
 
 		}
-		
+
 		function send_parameter(thisObj) {
 			var type = $(thisObj).parent().parent().attr('id');
 			var name = $(thisObj).attr('id');
@@ -354,27 +366,59 @@
 			var text = $("option:selected", thisObj).text();
 			//alert($("#choose_paramter:parent"));
 			//alert(type + "," + name +"," + text);
-			var cmd=type + "," + name +"," + text;
-			//var cmdobj={"command": cmd};
-			
-			//alert(cmdobj.command);
-/* 			$.ajax({
-		        type: "post",
-	            data: cmdobj,
-	            dataType: "json",
-	           //url:"./",
-		        success: function (data) {
-		            //console.log(data);
-		        	alert(data.command);
-		        },
-		        error: function(data) {
-		            alert("Error"+data);
-		            //console.log(data);
-		        }
+			var cmd = type + "," + name + "," + text;
+			$.post("/GATE-Interactive-Monitor/datatransfer.jsp", {
+				command : cmd
+			}, function(data) {
+				alert("Data Sent: " + data);
 			});
- */		
+
+			/* 			d3.select("#btn_get_simulation_status").on("click", function() {
+			 console.log("requesting simulation information");
+			 $.ajax({
+			 type : "post",
+			 url : "/GATE-Interactive-Monitor/simulation.jsp",
+			 data : {
+			 command : cmd,
+			 simulation_time : l_simulation_time,
+			 collimator_material : l_collimator_material,
+			 simulation_ROR : l_simulation_ROR,
+			 simulation_activity : l_simulation_activity
+			 },
+			 success : function(data) {
+			 alert(data);
+			 }
+			 });
+			 }); */
+			//alert(cmdobj.command);
+			/* 
+			 $.ajax({
+			 type : "post",
+			 url : "/ajax/get_simulation_status",
+
+			 success : function(data) {
+			 alert(data);
+			 }
+			 });
+			 */
+			/* 			$.ajax({
+			 type: "post",
+			 data: cmdobj,
+			 dataType: "json",
+			 //url:"./",
+			 success: function (data) {
+			 //console.log(data);
+			 alert(data.command);
+			 },
+			 error: function(data) {
+			 alert("Error"+data);
+			 //console.log(data);
+			 }
+			 });
+			 */
 
 		}
 	</script>
+
 </body>
 </html>
