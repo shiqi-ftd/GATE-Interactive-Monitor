@@ -315,12 +315,8 @@
 				</select>
 			</p>
 		</div>
-		<div id="myDiv">
-			<h2>Change</h2>
-		</div>
-
-		<a href="./result.jsp" class="myButton">Start Simulation </a> <a
-			class="myButton" id="btn_get_simulation_status">Start Simulation</a>
+		<a id="simu_start" class="myButton"
+			onclick="simu_start('#simu_start')">Start Simulation </a>
 
 
 
@@ -370,53 +366,29 @@
 			$.post("/GATE-Interactive-Monitor/datatransfer.jsp", {
 				command : cmd
 			}, function(data) {
-				alert("Data Sent: " + data);
+				//alert("Data Sent: " + data);
 			});
 
-			/* 			d3.select("#btn_get_simulation_status").on("click", function() {
-			 console.log("requesting simulation information");
-			 $.ajax({
-			 type : "post",
-			 url : "/GATE-Interactive-Monitor/simulation.jsp",
-			 data : {
-			 command : cmd,
-			 simulation_time : l_simulation_time,
-			 collimator_material : l_collimator_material,
-			 simulation_ROR : l_simulation_ROR,
-			 simulation_activity : l_simulation_activity
-			 },
-			 success : function(data) {
-			 alert(data);
-			 }
-			 });
-			 }); */
-			//alert(cmdobj.command);
-			/* 
-			 $.ajax({
-			 type : "post",
-			 url : "/ajax/get_simulation_status",
+		}
 
-			 success : function(data) {
-			 alert(data);
-			 }
-			 });
-			 */
-			/* 			$.ajax({
-			 type: "post",
-			 data: cmdobj,
-			 dataType: "json",
-			 //url:"./",
-			 success: function (data) {
-			 //console.log(data);
-			 alert(data.command);
-			 },
-			 error: function(data) {
-			 alert("Error"+data);
-			 //console.log(data);
-			 }
-			 });
-			 */
-
+		function simu_start() {
+			// Tested on Chrome and Safari, bug has fixed
+			var type = $("#simu_type option:selected").text();
+			if (type === "Cylindrical PET") {
+				type="Cylindrical";
+				alert("Start " + type +" Simultaion");
+			} else if (text === "Gamma Camera") {
+				type="Gamma";
+				alert("Start " + type +" Simultaion");
+			}
+			
+			//Start the simulation
+/* 			$.post("/GATE-Interactive-Monitor/result.jsp", {
+				type : type
+			}, function(data) {
+				alert("Data Sent: " + data);
+			});
+ */
 		}
 	</script>
 

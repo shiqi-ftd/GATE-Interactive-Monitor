@@ -35,7 +35,7 @@ public class set_param {
 */		String line;
 		String input = "";
 		while ((line = file.readLine()) != null) {
-			if (line.contains(sp.parm)) {
+			if (line.contains(sp.parm) && !line.contains("{")) {
 				input += "/control/alias" + " " + sp.parm + "  " + sp.value
 						+ '\n';
 			} else {

@@ -1,10 +1,10 @@
-/control/alias ViewPointThetaPhi  90 0
-/control/alias VisuOnOff  novisu
-/control/alias SourceActivity  10000. Bq
+/control/alias ViewPointThetaPhi  0 90
+/control/alias VisuOnOff  visu
+/control/alias SourceActivity  100. Bq
 /control/alias Nb_Detectors  64
-/control/alias CrystalMaterial  BGO
-/control/alias PhantomMaterial  Water
-/control/alias PhanRmax  25mm
+/control/alias CrystalMaterial  LSO
+/control/alias PhantomMaterial  Lead
+/control/alias PhanRmax  18 mm
 /control/alias PhanRmin  15mm
 /control/alias Phan_Source_Pos  0.0 0.0 0.0 mm
 /control/alias SourceVolMaterial  Water

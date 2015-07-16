@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,9 +47,20 @@
 	<div class="right">
 		<h4>Simulation Result</h4>
 		<a href="#" class="myButton">Current Server Status: </a> <br> <br>
-		<br> <a href="#" class="myButton">View macro file: </a> <br>
-		<br> <br> <a href="#" class="myButton">View Analysed Result:
-		</a>
+		<br> <a href="#" class="myButton" onclick="show_conf()">View
+			macro file <select id="simu_type">
+				<option value="0"></option>
+
+				<option value="1">Cylindrical PET</option>
+
+				<option value="2">Gamma Camera</option>
+
+		</select>
+		</a> <br>
+		<textarea name="content" cols="36" rows="8" id="content"
+			style="border: 1 solid #888888; LINE-HEIGHT: 20px; padding: 10px;"></textarea>
+		<br> <br> <br> <a href="#" class="myButton">View
+			Analysed Result: </a>
 	</div>
 
 	<div id="footer">
@@ -58,7 +71,46 @@
 	<script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 	<script type="text/javascript" src="scripts/d3.v3.min.js"></script>
-	<script type="text/javascript" src="shiqi.js"></script>
+	<script>
+		function show_conf() {
+			var type = $("#simu_type option:selected").text();
+			if (type === "Cylindrical PET") {
+				type = "Cylindrical";
+				loadXMLDoc("http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/configuration.mac")
+			} else if (type === "Gamma Camera") {
+				type = "Gamma";
+				loadXMLDoc("http://localhost:8080/GATE-Interactive-Monitor/conf/Gamma/configuration.mac")
+			}
+
+		}
+		function loadXMLDoc(url) {
+			xmlhttp = null;
+			if (window.XMLHttpRequest) {// code for Firefox, Opera, IE7, etc.
+				xmlhttp = new XMLHttpRequest();
+			} else if (window.ActiveXObject) {// code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			if (xmlhttp != null) {
+				xmlhttp.onreadystatechange = state_Change;
+				xmlhttp.open("GET", url, true);
+				xmlhttp.send(null);
+			} else {
+				alert("Your browser does not support XMLHTTP.");
+			}
+		}
+
+		function state_Change() {
+			if (xmlhttp.readyState == 4) {// 4 = "loaded"
+				if (xmlhttp.status == 200) {// 200 = "OK"
+					document.getElementById('content').innerHTML =
+				"<%=(new java.util.Date()).toLocaleString()%>" +'\n'
+				+ xmlhttp.responseText;
+				} else {
+					alert("Problem retrieving data:" + xmlhttp.statusText);
+				}
+			}
+		}
+	</script>
 
 </body>
 </html>
