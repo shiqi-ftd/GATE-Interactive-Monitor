@@ -45,10 +45,12 @@
 	</div>
 
 	<div class="right">
+	
 		<h4>Simulation Result</h4>
-		<a href="#" class="myButton">Current Server Status: </a> <br> <br>
-		<br> <a href="#" class="myButton" onclick="show_conf()">View
-			macro file <select id="simu_type">
+		
+		
+		<a href="#" class="myButton">Choose Simulation: 	
+		<select id="simu_type">
 				<option value="0"></option>
 
 				<option value="1">Cylindrical PET</option>
@@ -56,13 +58,37 @@
 				<option value="2">Gamma Camera</option>
 
 		</select>
-		</a> <br>
+		
+		</a> <br> <br>
+		<br> <a href="#" class="myButton" onclick="show_conf()">View
+			macro file 
+		</a> <br> <br>
+
 		<textarea name="content" cols="36" rows="8" id="content"
 			style="border: 1 solid #888888; LINE-HEIGHT: 20px; padding: 10px;"></textarea>
-		<br> <br> <br> <a href="#" class="myButton">View
-			Analysed Result: </a>
+		<br> <br> <br> <a href="#" class="myButton" onclick="view_result()" >View Analysed Result: 
+		</a> 			
+			
+			<br> 
+			<br> 
+			<br> 
+			
+			<a href="#"
+			class="myButton" onclick="download_result()">Download simulation
+			result: 
+		</a>
+		
+			<a href="http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.root"
+			class="myButton" >Download simulation
+			result: 
+		</a>
+		
+		
+<!-- 	<img id="resultpic" src="http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.gif">
+ -->
 	</div>
-
+	
+	
 	<div id="footer">
 		<p>&#169 GATE Interactive Monitor, 2015</p>
 	</div>
@@ -103,13 +129,40 @@
 			if (xmlhttp.readyState == 4) {// 4 = "loaded"
 				if (xmlhttp.status == 200) {// 200 = "OK"
 					document.getElementById('content').innerHTML =
-				"<%=(new java.util.Date()).toLocaleString()%>" +'\n'
-				+ xmlhttp.responseText;
+				"<%=(new java.util.Date()).toLocaleString()%>"
+							+ '\n' + xmlhttp.responseText;
 				} else {
 					alert("Problem retrieving data:" + xmlhttp.statusText);
 				}
 			}
 		}
+
+		function view_result() {
+			var type = $("#simu_type option:selected").text();
+			if (type === "Cylindrical PET") {
+				type = "Cylindrical";
+			    $("#resultpic").toggle();
+
+
+				} else if (type === "Gamma Camera") {
+			}
+
+		}
+		
+		
+		function download_result() {
+			var type = $("#simu_type option:selected").text();
+			if (type === "Cylindrical PET") {
+				type = "Cylindrical";
+				//alert(type);
+				window.location.href = 'http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.root';
+				} else if (type === "Gamma Camera") {
+				type = "Gamma";
+				window.location.href = 'http://localhost:8080/GATE-Interactive-Monitor/conf/Gamma/Gamma.root';
+			}
+
+		}
+
 	</script>
 
 </body>

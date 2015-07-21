@@ -94,6 +94,10 @@ a:hover {
 		to(#eee));
 }
 
+#resultpic{
+	background-position: top right;
+}
+
 #footer {
 	position: relative;
 	height: 50px;
