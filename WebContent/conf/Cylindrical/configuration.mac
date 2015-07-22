@@ -2,7 +2,7 @@
 /control/alias VisuOnOff  visu
 /control/alias SourceActivity  100. Bq
 /control/alias Nb_Detectors  2
-/control/alias CrystalMaterial  LSO
+/control/alias CrystalMaterial  NaI
 /control/alias PhantomMaterial  Lead
 /control/alias PhanRmax  18 mm
 /control/alias PhanRmin  15mm

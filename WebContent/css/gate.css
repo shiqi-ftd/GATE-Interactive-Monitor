@@ -94,8 +94,17 @@ a:hover {
 		to(#eee));
 }
 
-#resultpic{
-	background-position: top right;
+#rightcontent {
+	float: left;
+}
+
+#resultpic {
+	margin-top: 50px;
+	margin-right: 50px;
+	
+	float: left;
+	height: 600px;
+	length: 600px;
 }
 
 #footer {

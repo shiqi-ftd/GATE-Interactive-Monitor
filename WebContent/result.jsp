@@ -45,7 +45,7 @@
 	</div>
 
 	<div class="right">
-	
+		<div id="rightcontent">
 		<h4>Simulation Result</h4>
 		
 		
@@ -74,18 +74,20 @@
 			<br> 
 			
 			<a href="#"
-			class="myButton" onclick="download_result()">Download simulation
+			class="myButton" onclick="download_result()" id="downld">Download simulation
 			result: 
 		</a>
-		
-			<a href="http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.root"
+		</div>
+<!--  			<a href="http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.root"
 			class="myButton" >Download simulation
 			result: 
 		</a>
-		
-		
-<!-- 	<img id="resultpic" src="http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.gif">
- -->
+ -->	
+ 	<div>
+ 	
+ 	<img id="resultpic" src="" style="display:none">
+ 	
+ 	</div>
 	</div>
 	
 	
@@ -141,10 +143,13 @@
 			var type = $("#simu_type option:selected").text();
 			if (type === "Cylindrical PET") {
 				type = "Cylindrical";
+				$('#resultpic').attr('src','http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.gif');
 			    $("#resultpic").toggle();
 
 
 				} else if (type === "Gamma Camera") {
+				$('#resultpic').attr('src','http://localhost:8080/GATE-Interactive-Monitor/conf/Gamma/Gamma.gif');
+				$("#resultpic").toggle();
 			}
 
 		}
@@ -155,10 +160,15 @@
 			if (type === "Cylindrical PET") {
 				type = "Cylindrical";
 				//alert(type);
-				window.location.href = 'http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.root';
+				
+				$('#downld').attr('href','http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.root');
+
+				//window.location.href = 'http://localhost:8080/GATE-Interactive-Monitor/conf/Cylindrical/Cylindrical.root';
 				} else if (type === "Gamma Camera") {
 				type = "Gamma";
-				window.location.href = 'http://localhost:8080/GATE-Interactive-Monitor/conf/Gamma/Gamma.root';
+				$('#downld').attr('href','http://localhost:8080/GATE-Interactive-Monitor/conf/Gamma/Gamma.root');
+
+				//window.location.href = 'http://localhost:8080/GATE-Interactive-Monitor/conf/Gamma/Gamma.root';
 			}
 
 		}
