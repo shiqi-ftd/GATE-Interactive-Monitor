@@ -24,10 +24,17 @@ public class set_param {
 
 	public void set_conf(set_param sp) throws IOException {
 
-		 BufferedReader file = new BufferedReader(new FileReader(
-		 sp.path + '\\' + "WebContent\\conf" + '\\' +
-		 sp.type + '\\' + "configuration.mac"));
+		// On windows
+//		 BufferedReader file = new BufferedReader(new FileReader(
+//		 sp.path + '\\' + "WebContent\\conf" + '\\' +
+//		 sp.type + '\\' + "configuration.mac"));
 		
+		 //On Linux
+		 BufferedReader file = new BufferedReader(new FileReader(
+		 sp.path + '/' + "WebContent/conf" + '/' +
+		 sp.type + '/' + "configuration.mac"));
+		
+		 
 /*		BufferedReader file = new BufferedReader(new FileReader("C:" + '\\'
 				+ "Users" + '\\' + "szhong4" + '\\' + "Desktop" + '\\'
 				+ "GATE-Interactive-Monitor" + '\\' + "WebContent\\conf" + '\\'
@@ -46,9 +53,13 @@ public class set_param {
 		System.out.println(input);
 
 		// overwrite the conf file.
-
-		 File cf = new File(sp.path + '\\' +
-		 "WebContent\\conf" + '\\' + sp.type + '\\' + "configuration.mac");
+		// On windows
+//		 File cf = new File(sp.path + '\\' +
+//		 "WebContent\\conf" + '\\' + sp.type + '\\' + "configuration.mac");
+		//On Linux
+		 File cf = new File(sp.path + '/' +
+		 "WebContent/conf/"+ sp.type + "/configuration.mac");
+		
 		/// false to overwrite.
 /*		File cf = new File("C:" + '\\' + "Users" + '\\' + "szhong4" + '\\'
 				+ "Desktop" + '\\' + "GATE-Interactive-Monitor" + '\\'

@@ -9,9 +9,11 @@
 	//C:\Users\szhong4\GATE\GATE-Interactive-Monitor
 	//C:\Users\szhong4\Desktop\GATE-Interactive-Monitor
 	String cmd = request.getParameter("command");
-	String path = "C:" + '\\' + "Users" + '\\' + "szhong4" + '\\'
+/* 	String path = "C:" + '\\' + "Users" + '\\' + "szhong4" + '\\'
 			+ "Desktop" + '\\' + "GATE-Interactive-Monitor" + '\\';
-	if (cmd != null) {
+ */	
+ 	String path = "/Users/ShiqiZhong/Desktop/GATE-Interactive-Monitor";
+ 	if (cmd != null) {
 		String[] param = cmd.split(",");
 		param[1] = param[1].replace("2", "");
 		set_param sp = new set_param(param, path);

@@ -373,13 +373,11 @@
 
 		function simu_start() {
 			// Tested on Chrome and Safari, bug has fixed
-			var type = $("#simu_type option:selected").text();
+ 			var type = $("#simu_type option:selected").text();
 			if (type === "Cylindrical PET") {
 				type="Cylindrical";
-				alert("Start " + type +" Simultaion");
 			} else if (text === "Gamma Camera") {
 				type="Gamma";
-				alert("Start " + type +" Simultaion");
 			}
 			
 			//Start the simulation
@@ -388,8 +386,10 @@
 			}, function(data) {
 				alert("Data Sent: " + data);
 			});
- */
-		}
+ */		
+ 		
+ 		window.open("/GATE-Interactive-Monitor/result.jsp");
+ 		}
 	</script>
 
 </body>
