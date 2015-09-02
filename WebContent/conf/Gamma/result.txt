@@ -19,75 +19,25 @@
 [Core-0] **********************************************************************
 [Core-0] 
 [Core-0] You are using Geant4 version 10.1.1
-[Core-0] Starting macro Coin_Chan.mac
- CREATED THE COMMAND /gate/systems/cylindricalPET/addAnewRsector
+[Core-0] Starting macro Gamma_Camera.mac
+ GateDetectorConstruction::insertARFSD  entered 
+ created a ARF Sensivitive Detector 
+ created command /gate/systems/SPECThead/arf/setARFStage
+ GetDirectoryName()+ setHeight = /gate/hole/geometry/setHeight
 
-GATE object:        'systems/cylindricalPET'
+GATE object:        'systems/SPECThead'
 Components:
 
-GATE object:        'systems/cylindricalPET/base'
-Attached to volume: cylindricalPET
+GATE object:        'systems/SPECThead/base'
+Attached to volume: SPECThead
 Nb of children:       1
 
-	GATE object:        'systems/cylindricalPET/rsector'
-	Attached to volume: cassette
+	GATE object:        'systems/SPECThead/crystal'
+	Attached to volume: crystal
 	Nb of children:       1
 
-		GATE object:        'systems/cylindricalPET/module'
-		Attached to volume: module
-		Nb of children:       1
-
-			GATE object:        'systems/cylindricalPET/submodule'
-			Attached to volume: ---
-			Nb of children:       1
-
-				GATE object:        'systems/cylindricalPET/crystal'
-				Attached to volume: crystal
-				Nb of children:       4
-
-					GATE object:        'systems/cylindricalPET/layer0'
-					Attached to volume: ---
-					Nb of children:       0
-
-					GATE object:        'systems/cylindricalPET/layer1'
-					Attached to volume: ---
-					Nb of children:       0
-
-					GATE object:        'systems/cylindricalPET/layer2'
-					Attached to volume: ---
-					Nb of children:       0
-
-					GATE object:        'systems/cylindricalPET/layer3'
-					Attached to volume: ---
-					Nb of children:       0
-geometrical design type: 1
-ring diameter: 10 cm 
-rsector axial pitch: 0 fm 
-rsector azimuthal pitch: 180 degree
-rsector tangential size: 4 mm 
-rsector axial size: 4 mm 
-module axial size: 4 mm 
-module tangential size: 4 mm 
-module axial pitch: 0 fm 
-module tangential pitch: 0 fm 
-submodule axial size: 4 mm 
-submodule tangential size: 4 mm 
-submodule axial pitch: 0 fm 
-submodule tangential pitch: 0 fm 
-crystal radial size: 1 cm 
-crystal axial size: 4 mm 
-crystal tangential size: 4 mm 
-crystal axial pitch: 0 fm 
-crystal tangential pitch: 0 fm 
-Axial nb of rsectors: 1
-Azimuthal nb of rsectors: 2
-Axial nb of modules: 1
-Tangential nb of modules: 1
-Axial nb of submodules: 1
-Tangential nb of submodules: 1
-Axial nb of crystals: 1
-Tangential nb of crystals: 1
-Radial nb of layers: 0
+		GATE object:        'systems/SPECThead/pixel'
+		Attached to volume: ---
  <!> *** WARNING *** <!>  Unknown process: MultipleScattering
  <!> *** WARNING *** <!>  Unknown process: MultipleScattering
 
@@ -143,10 +93,35 @@ List of initialized processes:
 Please, use physic list builder mechanism instead. Related documentation can be found at:
 http://wiki.opengatecollaboration.org/index.php/Users_Guide_V7.0:Setting_up_the_physics
 [Core-0] Initialization of actors
+		Nb of children:       0
 GateSourceMgr::ListSources: List of the sources in the source manager
-Source --------------> TwoGamma
+Source --------------> GammaSource
   ID                 : 0
-  type               : backtoback
+  type               : gps
+  activity (Bq)      : 100
+  startTime (s)      : 0
+  time (s)           : 0
+  forcedUnstable     : 0
+  forcedHalfLife (s) : -0.693147
+  verboseLevel       : 0
+  relative to vol    : world
+---------------------- 
+
+Source --------------> GammaSource2
+  ID                 : 1
+  type               : gps
+  activity (Bq)      : 100
+  startTime (s)      : 0
+  time (s)           : 0
+  forcedUnstable     : 0
+  forcedHalfLife (s) : -0.693147
+  verboseLevel       : 0
+  relative to vol    : world
+---------------------- 
+
+Source --------------> GammaSource3
+  ID                 : 2
+  type               : gps
   activity (Bq)      : 100
   startTime (s)      : 0
   time (s)           : 0
@@ -165,24 +140,26 @@ Source --------------> TwoGamma
 [Acquisition-0] Simulation will have  = 10 run(s)
 
 --------- Ranlux engine status ---------
- Initial seed = -2637408457036414178
- randoms[] = 0.564519
-0.389793
-0.941494
-0.663273
-0.699969
-0.762456
-0.120597
-0.978705
-0.110583
-0.316783
-0.309716
-0.687709
+ Initial seed = -3565387804097652674
+ randoms[] = 0.433648
+0.313583
+0.14795
+0.953453
+0.656154
+0.116964
+0.712765
+0.814915
+0.919002
+0.910306
+0.12639
+0.855045
 
  carry = 0, index = 8
- luxury = 1 pDiscard = 202
+ luxury = 1 pDiscard = 1826822106
 ----------------------------------------
 [Acquisition-0] Slice 0 from 0 to 1 s [slice=1 s], final stop at 10 s.
+Confirming confinement to volume 'source_vol_phys'...
+Confirming confinement to volume 'source_vol_phys'...
 Confirming confinement to volume 'source_vol_phys'...
 
 Compton:   for  gamma, applyCuts: 1     SubType= 13  BuildTable= 1
@@ -235,20 +212,11 @@ ElectronIonisation:   for  e+    SubType= 2
 annihil:   for  e+, integral: 1 , applyCuts: 1     SubType= 5  BuildTable= 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             eplus2gg :  Emin=        0 eV    Emax=       10 TeV
-[Acquisition-0] Slice 1 from 1 to 2 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 2 from 2 to 3 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 3 from 3 to 4 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 4 from 4 to 5 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 5 from 5 to 6 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 6 from 6 to 7 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 7 from 7 to 8 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 8 from 8 to 9 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 9 from 9 to 10 s [slice=1 s], final stop at 10 s.
-[Core-0] End of macro Coin_Chan.mac
-GateOutputMgr deleting...
-Graphics systems deleted.
-Visualization Manager deleting...
-WARNING - Attempt to delete the physical volume store while geometry closed !
-WARNING - Attempt to delete the logical volume store while geometry closed !
-WARNING - Attempt to delete the solid store while geometry closed !
-WARNING - Attempt to delete the region store while geometry closed !
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...

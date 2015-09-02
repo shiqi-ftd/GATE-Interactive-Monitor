@@ -165,22 +165,22 @@ Source --------------> TwoGamma
 [Acquisition-0] Simulation will have  = 10 run(s)
 
 --------- Ranlux engine status ---------
- Initial seed = -2637408457036414178
- randoms[] = 0.564519
-0.389793
-0.941494
-0.663273
-0.699969
-0.762456
-0.120597
-0.978705
-0.110583
-0.316783
-0.309716
-0.687709
+ Initial seed = -191131266892043771
+ randoms[] = 0.67296
+0.0105855
+0.08333
+0.733912
+0.170417
+0.972283
+0.0253829
+0.243246
+0.523457
+0.476112
+0.0931547
+0.561372
 
  carry = 0, index = 8
- luxury = 1 pDiscard = 202
+ luxury = 1 pDiscard = 2073206052
 ----------------------------------------
 [Acquisition-0] Slice 0 from 0 to 1 s [slice=1 s], final stop at 10 s.
 Confirming confinement to volume 'source_vol_phys'...
@@ -235,20 +235,23 @@ ElectronIonisation:   for  e+    SubType= 2
 annihil:   for  e+, integral: 1 , applyCuts: 1     SubType= 5  BuildTable= 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+GateTrajectoryNavigator::FindSourcePosition : WARNING : sourceIndex out of range: -1
 [Acquisition-0] Slice 1 from 1 to 2 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 2 from 2 to 3 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 3 from 3 to 4 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 4 from 4 to 5 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 5 from 5 to 6 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 6 from 6 to 7 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 7 from 7 to 8 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 8 from 8 to 9 s [slice=1 s], final stop at 10 s.
-[Acquisition-0] Slice 9 from 9 to 10 s [slice=1 s], final stop at 10 s.
-[Core-0] End of macro Coin_Chan.mac
-GateOutputMgr deleting...
-Graphics systems deleted.
-Visualization Manager deleting...
-WARNING - Attempt to delete the physical volume store while geometry closed !
-WARNING - Attempt to delete the logical volume store while geometry closed !
-WARNING - Attempt to delete the solid store while geometry closed !
-WARNING - Attempt to delete the region store while geometry closed !
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
+aborting Run ...
