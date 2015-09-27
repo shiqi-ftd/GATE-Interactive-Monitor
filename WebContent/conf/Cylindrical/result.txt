@@ -88,66 +88,19 @@ Tangential nb of submodules: 1
 Axial nb of crystals: 1
 Tangential nb of crystals: 1
 Radial nb of layers: 0
- <!> *** WARNING *** <!>  Unknown process: MultipleScattering
- <!> *** WARNING *** <!>  Unknown process: MultipleScattering
-
-
-List of Enabled processes:
-
-
-   ===  Process: Bremsstrahlung  ===
-Particle: e+
-    * Model(s):
-       - StandardModel
-Particle: e-
-    * Model(s):
-       - StandardModel
-
-   ===  Process: Compton  ===
-Particle: gamma
-    * Model(s):
-       - StandardModel
-
-   ===  Process: ElectronIonisation  ===
-Particle: e+
-    * Model(s):
-       - StandardModel
-Particle: e-
-    * Model(s):
-       - StandardModel
-
-   ===  Process: PhotoElectric  ===
-Particle: gamma
-    * Model(s):
-       - StandardModel
-
-   ===  Process: PositronAnnihilation  ===
-Particle: e+
-
-   ===  Process: RadioactiveDecay  ===
-Particle: GenericIon
-
-   ===  Process: RayleighScattering  ===
-Particle: gamma
-    * Model(s):
-       - PenelopeModel
-
-
-
-List of initialized processes:
-
-
+[Physic-0] The following Geant4's physic-list is enabled :emstandard
 [Core-0] Initialization of geometry
 [Core-0] Initialization of physics
-[Physic-0] WARNING: manual physic lists are being deprecated.
-Please, use physic list builder mechanism instead. Related documentation can be found at:
-http://wiki.opengatecollaboration.org/index.php/Users_Guide_V7.0:Setting_up_the_physics
 [Core-0] Initialization of actors
+G4OpenGLViewerMessenger::SetNewValue: No current viewer.
+  "/vis/open", or similar, to get one.
+G4OpenGLViewerMessenger::SetNewValue: No current viewer.
+  "/vis/open", or similar, to get one.
 GateSourceMgr::ListSources: List of the sources in the source manager
 Source --------------> TwoGamma
   ID                 : 0
   type               : backtoback
-  activity (Bq)      : 100
+  activity (Bq)      : 10000
   startTime (s)      : 0
   time (s)           : 0
   forcedUnstable     : 0
@@ -164,86 +117,201 @@ Source --------------> TwoGamma
 [Acquisition-0] Simulation end time   = 10 sec
 [Acquisition-0] Simulation will have  = 10 run(s)
 
---------- Ranlux engine status ---------
- Initial seed = -2637408457036414178
- randoms[] = 0.564519
-0.389793
-0.941494
-0.663273
-0.699969
-0.762456
-0.120597
-0.978705
-0.110583
-0.316783
-0.309716
-0.687709
-
- carry = 0, index = 8
- luxury = 1 pDiscard = 202
+--------- MTwist engine status ---------
+ Initial seed      = -4509474912474025456
+ Current index     = 131
+ Array status mt[] = 
+2524131856 1533619129 3369580760 3554868008 537489529
+736675328 506047876 3300385689 2414927688 2001887737
+2651729760 2243004727 3417920631 1312135955 420384746
+2763485923 1331792919 272910717 3834989025 242194879
+1436700909 1321470643 2138962834 2668410516 1968404932
+888586576 3165885288 309106799 358768741 799197812
+2049136992 3389588198 811496187 3983602090 3715340557
+3961364331 4261044910 1268958436 2462780669 200644608
+522364906 3727903481 3634519822 4239893710 3059602575
+2019686988 3545441293 203863671 324063905 502399796
+3223997748 4184427364 3547771925 1648317089 210963092
+944028185 3411905687 4222907423 3503610564 2484971900
+300393072 3166354671 1020714813 2987237010 4255742354
+209512756 2846210820 3853041251 2318029478 3782750075
+3291601116 2519511488 2551684432 2855248481 455127707
+1581712432 4001203747 3830362223 1469521000 316623934
+2993367044 59490157 3917099409 1654774703 1757923960
+3482814544 32007063 3675665576 1226545933 524404631
+3558127791 2728094133 3170637261 1234046090 4185694455
+796710177 3714672103 746981527 2405666231 2331227662
+3736456930 1935772072 3154751825 3997425892 3753520073
+1004452761 62537285 352861542 872752424 2672146359
+1788651541 1971631057 270691074 2379581945 3063395579
+188577842 3225552044 2602254786 2755353588 292941767
+2099012537 381718611 579398651 2383376064 1335680900
+1731930036 1489131621 1723582833 3776237362 3003866388
+1625538546 1872410592 3894752907 2510841583 3230675269
+3996804839 4147047934 461851544 1095333120 1540567730
+3954318761 2941890525 438699019 845450148 1850629510
+1632075606 3132165287 3670919982 1714951319 3484225345
+1087309410 151594532 2959963662 2554040023 3746472289
+3829351559 621233778 1700361173 2357576128 1580003051
+2522316144 2017449689 678688088 3488605145 418036068
+221056603 890772495 432560144 467701434 3710147145
+2675243102 2712729781 2486075421 3861390250 1096238233
+4004872805 3167272556 2690504021 954583687 3272503732
+444505445 1463913676 2501876757 4043936584 3449147341
+2921596349 3615968343 846970973 3519232303 732426331
+1691027047 2001879679 2046775540 2317443048 1964802646
+103353236 2537296106 3784512911 3959818112 981056564
+2382297998 1132557703 2552905322 2449976593 3738379209
+3208598333 1437119787 2935794403 1287079383 2328379133
+2990851055 2462475158 1926211834 637370142 4231128174
+748268058 3256202904 2098964866 3319449099 566655361
+2635154243 1728991488 3780775617 638222123 3410101525
+328681229 2516290945 306039312 1051625718 600809585
+3376020729 1703418571 4144461336 4101282578 2871817757
+2146939364 1572867719 3727444809 3731459810 2391755062
+2679348470 564916919 3286496167 1528669477 3676836522
+2193039136 2264551906 621641621 1520004419 3786124673
+3142111686 2798993869 2714527845 3660588578 2398874177
+85194540 141178782 2978097877 2428092503 2852482574
+525338178 103307917 4078438757 1413653127 1670574244
+3762028704 3346877851 2219327617 2694232441 2565658582
+300529008 1363229885 3601695934 1803175200 3959690581
+1531572611 1526953436 1946968260 3621303629 3460220255
+3944458534 4247220016 2825454011 2177069146 1910274646
+360514354 1409399578 474313796 527385526 2704961133
+1914527599 612756427 669316601 4004912864 1459268663
+1921400567 1229914036 1680421328 3395627805 1744781699
+2461238580 628829177 1152621801 1257308469 107508790
+1056597757 3224197185 566285567 941342989 1345433556
+1519036413 1252058145 837338906 3449780025 2136984158
+309096052 2018152002 880327534 1248405286 1282213920
+3731371399 3831753943 1911144356 1790405534 4170770621
+2063037369 639394076 1879203025 2769177050 1840088323
+1593285782 2147836252 3462318112 4239492958 3123330493
+3164243240 1469430368 1560631508 600659161 2212214450
+3850732806 3399760076 2854259843 554058750 1883210700
+4155494648 3988166883 1145446969 478752758 2412676329
+1485698391 1924190671 468070244 4244544791 1916923332
+3527280542 1245553111 1171982929 98013876 934672361
+3059597975 26390000 1888485720 2708355338 445351958
+430450585 2101619529 3036601173 3086276673 3358191266
+2925412469 4137928164 1602549205 1998298267 18321146
+2191598683 98174999 2037526542 2812546343 2287129430
+2205635682 4182593951 2280807048 2325606067 489346967
+945424790 2050091378 1061653600 2309433830 4191981051
+3758865820 1094398656 1877899887 2901934701 38077591
+3454913180 275600325 4225471940 1677669011 1246867947
+2284961120 183665081 1328214477 3704077709 3559330328
+1704831230 213456563 1934295732 2105421891 2387668065
+1173230891 1016433583 2542646565 1085214274 3702996111
+1759652441 3461189082 3063407612 3443630874 52644354
+3509646636 2351635122 2959456596 3318961431 3656271118
+2592977736 126146142 1794040131 2356457844 127947193
+663028009 269688094 2994850564 2139127949 4278112172
+386472252 3154770146 1073119831 1504382091 2929993963
+3180611367 2219378320 1244976598 4200437772 1218819429
+2490059955 4149149137 712233243 3435787045 1485830973
+134091500 4015260957 2953122584 1974858885 1879062360
+1095993510 2882259753 3437822466 2666910957 2021243732
+3534231255 687542579 3354086255 113698281 2259367999
+312753248 2812844336 2619185871 3624342391 809236699
+4046405119 2398602113 719251717 2404277328 433557494
+248177771 3947993169 3036724213 2698435219 4247691414
+1909240683 2437954097 2033100867 422831535 3940353901
+2253124745 2689927551 909183930 3178769800 3966184921
+2446532014 1988342533 1856849154 2966148766 2998125368
+78984979 3097191981 3749621758 2650490369 2611170272
+1422840924 470163044 1090087400 753761382 251757236
+3580962687 1880463204 653197078 3758926440 1865897910
+1957682611 24394939 3561425669 363315421 1081116913
+3215653169 1253635233 1781687975 1473587398 4250624264
+635092445 3166931448 1799109678 4273065428 2340622429
+293592330 1121861762 1652341372 4039463139 902208499
+1627096179 1728346703 2258190168 4041435413 2710240326
+202976425 4139647495 4246171759 1665982004 3214176070
+312249266 3576287893 3799840718 3031537026 2329155426
+4124950595 1130932768 2105352362 4290689497 1827920357
+3070623064 2957369195 873479639 4040180158 3615315769
+1000778575 2045353685 3492149587 2607476092 329713767
+3405399825 2835365321 1311756491 662804135 3316322645
+3597496033 1983587554 2634078980 2852409364 2808570021
+2889073503 3877628590 4006653695 4257900587 1102960452
+265219130 836834720 985201635 2514411027 752576442
+4065773860 2217808682 2602479180 1985754255 874632908
+2330658375 2680547073 165527608 625637094 1824801097
+2794150516 2547957279 2168141635 2155583412 992969890
+905501119 1906938413 2447273779 3797909289 500403563
+684189389 2003263736 126207701 1491245862 1514143037
+1641770059 2658042898 4054104941 3234150404 1535351782
+1804997831 2483373059 2850778699 476202480 1734171220
+1397936818 816692805 2026487648 3466478125 2398511827
+2994238115 2092705136 2126603841 3690539117
 ----------------------------------------
 [Acquisition-0] Slice 0 from 0 to 1 s [slice=1 s], final stop at 10 s.
 Confirming confinement to volume 'source_vol_phys'...
 
-Compton:   for  gamma, applyCuts: 1     SubType= 13  BuildTable= 1
-      Lambda table from 100 eV  to 1 MeV, 7 bins per decade, spline: 1
-      LambdaPrime table from 1 MeV to 10 TeV in 49 bins 
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-       Klein-Nishina :  Emin=        0 eV    Emax=       10 TeV
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
 
-PhotoElectric:   for  gamma, applyCuts: 1     SubType= 12  BuildTable= 0
-      LambdaPrime table from 200 keV to 10 TeV in 54 bins 
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-       PhotoElectric :  Emin=        0 eV    Emax=       10 TeV   AngularGenSauterGavrila
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
 
-RayleighScattering:   for  gamma, applyCuts: 1     SubType= 11  BuildTable= 1
-      Lambda table from 100 eV  to 100 keV, 7 bins per decade, spline: 0
-      LambdaPrime table from 100 keV to 10 TeV in 56 bins 
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-         PenRayleigh :  Emin=        0 eV    Emax=      100 GeV
-
-Bremsstrahlung:   for  e-    SubType= 3
-      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
-      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
-      LPM flag: 1 for E > 1 GeV
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
-            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
-
-ElectronIonisation:   for  e-    SubType= 2
-      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
-      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
-      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
-
-Bremsstrahlung:   for  e+    SubType= 3
-      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
-      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
-      LPM flag: 1 for E > 1 GeV
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
-            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
-
-ElectronIonisation:   for  e+    SubType= 2
-      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
-      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
-      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
-
-annihil:   for  e+, integral: 1 , applyCuts: 1     SubType= 5  BuildTable= 0
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 1 from 1 to 2 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 2 from 2 to 3 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 3 from 3 to 4 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 4 from 4 to 5 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 5 from 5 to 6 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 6 from 6 to 7 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 7 from 7 to 8 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 8 from 8 to 9 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Acquisition-0] Slice 9 from 9 to 10 s [slice=1 s], final stop at 10 s.
+WARNING: Scene "none" not found.
+  /vis/scene/list to see scenes.
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+WARNING: command "/vis/viewer/update" could not be applied: no current viewer.
 [Core-0] End of macro Coin_Chan.mac
 GateOutputMgr deleting...
 Graphics systems deleted.

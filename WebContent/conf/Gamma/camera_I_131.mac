@@ -7,7 +7,7 @@
 
 /gate/world/daughters/name 						SPECThead
 /gate/world/daughters/insert					box
-/gate/SPECThead/geometry/setXLength  			11. cm
+/gate/SPECThead/geometry/setXLength  			10. cm
 /gate/SPECThead/geometry/setYLength 			21. cm
 /gate/SPECThead/geometry/setZLength 			30. cm
 /gate/SPECThead/placement/setTranslation 		{x_placement} 0. 0. cm
@@ -20,7 +20,7 @@
 
 /gate/SPECThead/daughters/name 					shielding
 /gate/SPECThead/daughters/insert 				box
-/gate/shielding/geometry/setXLength  			11. cm
+/gate/shielding/geometry/setXLength  			10. cm
 /gate/shielding/geometry/setYLength 			21. cm
 /gate/shielding/geometry/setZLength 			30. cm
 /gate/shielding/placement/setTranslation  		0. 0. 0. cm

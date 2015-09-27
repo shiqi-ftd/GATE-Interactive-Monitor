@@ -582,5 +582,8 @@ void Coin_Chan()
 {
    // Popup the GUI...
 
-   main = new MyMainFrame(gClient->GetRoot(), 350, 80);
+   //main = new MyMainFrame(gClient->GetRoot(), 350, 80);
+
+
+
 }

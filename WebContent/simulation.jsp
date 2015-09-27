@@ -129,18 +129,18 @@
 				PhanRmax: <select id="PhanRmax"
 					onclick="send_parameter('#PhanRmax')">
 					<option value="0"></option>
-					<option value="1">18mm</option>
-					<option value="2">20mm</option>
-					<option value="3">25mm</option>
+					<option value="1">18 mm</option>
+					<option value="2">20 mm</option>
+					<option value="3">25 mm</option>
 				</select>
 			</p>
 			<p>
 				PhanRmin: <select id="PhanRmin"
 					onclick="send_parameter('#PhanRmin')">
 					<option value="0"></option>
-					<option value="1">13mm</option>
-					<option value="2">15mm</option>
-					<option value="3">17mm</option>
+					<option value="1">13 mm</option>
+					<option value="2">15 mm</option>
+					<option value="3">17 mm</option>
 				</select>
 			</p>
 			<p>
@@ -350,9 +350,7 @@
 			} else {
 				$("#Cylindrical").hide();
 				$("#Gamma").hide();
-
 			}
-
 		}
 
 		function send_parameter(thisObj) {
@@ -373,23 +371,28 @@
 
 		function simu_start() {
 			// Tested on Chrome and Safari, bug has fixed
- 			var type = $("#simu_type option:selected").text();
+			var type = $("#simu_type option:selected").text();
 			if (type === "Cylindrical PET") {
-				type="Cylindrical";
-			} else if (text === "Gamma Camera") {
-				type="Gamma";
+				type = "Cylindrical";
+			}else if (type === "Gamma Camera") {
+				type = "Gamma";
+			} else{
+				type = "unset";
 			}
-			
 			//Start the simulation
-/* 			$.post("/GATE-Interactive-Monitor/result.jsp", {
-				type : type
+			/* 			$.post("/GATE-Interactive-Monitor/result.jsp", {
+			 type : type
+			 }, function(data) {
+			 alert("Data Sent: " + data);
+			 });
+			 */
+ 			$.post("runbash.jsp", {
+				simutype : type
 			}, function(data) {
-				alert("Data Sent: " + data);
+				//alert("Data Sent: " + data);
 			});
- */		
- 		
- 		window.open("/GATE-Interactive-Monitor/result.jsp");
- 		}
+ 			window.open("/GATE-Interactive-Monitor/result.jsp");
+		}
 	</script>
 
 </body>

@@ -111,7 +111,7 @@ MyMainFrame::MyMainFrame(const TGWindow *p, UInt_t w, UInt_t h) :
 	
 	// Create canvas widget
 	fEcanvas = new TRootEmbeddedCanvas("Ecanvas",fMain,1050, 750); 
-	fEcanvas->GetCanvas()->Divide(2,3);
+	fEcanvas->GetCanvas()->Divide(2,2);
 	fMain->AddFrame(fEcanvas, new TGLayoutHints(kLHintsExpandX| kLHintsExpandY,10,10,10,1));
 	// Create a horizontal frame widget with buttons
 	TGHorizontalFrame *hframe = new TGHorizontalFrame(fMain,200,40); 
@@ -262,6 +262,7 @@ void MyMainFrame::GammaCamera(TString fname)
 	cout << endl;
 	
 	Int_t nentries = Singles->GetEntries();
+	Int_t ntotal = total_nb_primaries->GetMean();
 	Int_t nbytes = 0;
 	
 	//	cout<<"##### nb of entries: " << nentries <<endl;
@@ -353,6 +354,7 @@ void MyMainFrame::GammaCamera(TString fname)
 	
 	C1->SetFillColor(0);
 	C1->cd(1);
+	C1->cd(1)->SetLogy();
 	
 	ener->SetFillColor(2);
 	ener->SetFillStyle(3023);
@@ -438,12 +440,12 @@ void MyMainFrame::GammaCamera(TString fname)
 	globalPosZ_Y->GetYaxis()->SetTitle("globalPosY (mm)");
 	globalPosZ_Y->Draw();
 	
-	C1->SetFillColor(0);
-	C1->cd(5);
+	//C1->SetFillColor(0);
+	//C1->cd(5);
 	
-	globalPosZ_Y_Ewin->GetXaxis()->SetTitle("globalPosZ (mm)");
-	globalPosZ_Y_Ewin->GetYaxis()->SetTitle("globalPosY (mm)");
-	globalPosZ_Y_Ewin->Draw();	
+	//globalPosZ_Y_Ewin->GetXaxis()->SetTitle("globalPosZ (mm)");
+	//globalPosZ_Y_Ewin->GetYaxis()->SetTitle("globalPosY (mm)");
+	//globalPosZ_Y_Ewin->Draw();
 	
 	
 	// save Plot to disk 
@@ -472,14 +474,16 @@ void MyMainFrame::GammaCamera(TString fname)
 	cout << " *                                                                                 * " << endl;
 	cout << " *********************************************************************************** " << endl;
 	cout << endl;
-	cout<<"##### Number of emitted particles    :  "	<<total_nb_primaries->GetMean()<<endl;
+	
+	cout<<"##### Number of emitted particles    :  "	<<ntotal<<endl;
 	cout<<"##### Number of detected events      :  "	<<nentries<<endl;
-	cout<<"##### Primary events                 :  "	<<primary_event/nentries*100<<"  %"<<endl;
-	cout<<"##### Scatter in the phantom         :  "	<<scatter_phantom/nentries*100<<" %"<<endl;
-	cout<<"##### Scatter in the table           :  "	<<scatter_table/nentries*100<<" %"<<endl;
-	cout<<"##### Scatter in the collimator      :  "	<<scatter_collim/nentries*100<<" %"<<endl;
-	cout<<"##### Scatter in the crystal         :  "	<<scatter_crystal/nentries*100<<" %"<<endl;
-	cout<<"##### Scatter in the backcompartment :  "	<<scatter_compartment/nentries*100<<" %"<<endl;
+	cout<<"##### ratio detected/emitted         :  "	<<float(nentries)/float(ntotal)*100<<" %"<<endl;
+	cout<<"##### Primary events                 :  "	<<primary_event/nentries*100       <<" %"<<endl;
+	cout<<"##### Scatter in the phantom         :  "	<<scatter_phantom/nentries*100     <<" %"<<endl;
+	cout<<"##### Scatter in the table           :  "	<<scatter_table/nentries*100       <<" %"<<endl;
+	cout<<"##### Scatter in the collimator      :  "	<<scatter_collim/nentries*100      <<" %"<<endl;
+	cout<<"##### Scatter in the crystal         :  "	<<scatter_crystal/nentries*100     <<" %"<<endl;
+	cout<<"##### Scatter in the backcompartment :  "	<<scatter_compartment/nentries*100 <<" %"<<endl;
 	cout << endl;
 	if (ordertot > 0) {
 		cout<<"##### Scatter order  1 : "<<order1/ordertot*100<<" %"<<endl;

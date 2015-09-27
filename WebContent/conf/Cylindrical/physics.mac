@@ -23,8 +23,8 @@
 #for ion source
 /gate/physics/addProcess RadioactiveDecay
 
-/gate/physics/addProcess MultipleScattering e+
-/gate/physics/addProcess MultipleScattering e-
+/gate/physics/addProcess eMultipleScattering e+
+/gate/physics/addProcess eMultipleScattering e-
 
 /gate/physics/processList Enabled
 /gate/physics/processList Initialized

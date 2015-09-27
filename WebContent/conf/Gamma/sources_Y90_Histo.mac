@@ -2,7 +2,7 @@
 /gate/source/addSource 					Y90Source
 /gate/source/Y90Source/setActivity 		{SourceActivity}
 /gate/source/Y90Source/gps/particle 	e-
-#/gate/source/Y90Source/gps/energytype 	Arb
+/gate/source/Y90Source/gps/energytype 	Arb
 /gate/source/Y90Source/gps/histname 	arb
 /gate/source/Y90Source/gps/emin 		0. keV
 /gate/source/Y90Source/gps/emax 		2284. keV
@@ -389,8 +389,10 @@
 /gate/source/Y90Source/gps/histpoint    2.280    0   
 
 
-/gate/source/Y90Source/setForcedUnstableFlag	true
-/gate/source/Y90Source/setForcedHalfLife 		230760 s
+#/gate/source/Y90Source/setForcedUnstableFlag	true
+#/gate/source/Y90Source/setForcedHalfLife 		230760 s
+
+/gate/source/Y90Source/gps/arbint 				Lin
 /gate/source/Y90Source/gps/type 				Volume
 /gate/source/Y90Source/gps/shape 				Sphere
 /gate/source/Y90Source/gps/radius 				0.125 mm

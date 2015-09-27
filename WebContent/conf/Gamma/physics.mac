@@ -20,8 +20,11 @@
 
 /gate/physics/addProcess PositronAnnihilation
 
-/gate/physics/addProcess MultipleScattering e+
-/gate/physics/addProcess MultipleScattering e-
+#/gate/physics/addProcess MultipleScattering e+
+#/gate/physics/addProcess MultipleScattering e-
+/gate/physics/addProcess eMultipleScattering e+
+/gate/physics/addProcess eMultipleScattering e-
+
 
 #for ion source
 /gate/physics/addProcess RadioactiveDecay

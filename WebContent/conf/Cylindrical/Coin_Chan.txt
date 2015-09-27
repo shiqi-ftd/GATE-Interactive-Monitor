@@ -1,12 +1,12 @@
 ViewPointThetaPhi: 0 90; 90 0; 89 90; 30 30;
 VisuOnOff: novisu; visu;
-SourceActivity: 100. Bq; 1000. Bq; 10000. Bq; 100000. Bq;
+SourceActivity: 1000. Bq; 100. Bq; 10000. Bq; 100000. Bq;
 Nb_Detectors: 2; 64;
 CrystalMaterial: LSO; BGO; NaI;
-PhantomMaterial: Water; Air; Vacuum; Lead; PVC; Plexiglass;
-PhanRmax: 18 mm; 20 mm; 25 mm;
-PhanRmin: 13 mm; 15 mm; 17 mm;
+PhantomMaterial: Vacuum; Lead; Water; Air; PVC; Plexiglass;
+PhanRmax: 25 mm; 18 mm; 20 mm;
+PhanRmin: 17 mm; 13 mm; 15 mm;
 Phan_Source_Pos: 0.0 0.0 0.0 mm;
-SourceVolMaterial: Air; Water; Vacuum; PVC; Plexiglass;
+SourceVolMaterial: Vacuum; Air; PVC; Water; Plexiglass;
 SourceEnergy: 511 keV; 100 keV;
 RootFileName: Coin_Chan_{Nb_Detectors}_{PhantomMaterial};
