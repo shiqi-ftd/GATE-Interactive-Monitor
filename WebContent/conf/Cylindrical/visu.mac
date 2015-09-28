@@ -1,7 +1,7 @@
 #
 #	V I S U A L I S A T I O N
 #
-/vis/open 				OGLSX
+#/vis/open 				OGLSX
 /vis/viewer/reset
 
 /vis/viewer/set/viewpointThetaPhi	{ViewPointThetaPhi}

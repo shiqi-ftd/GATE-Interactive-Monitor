@@ -1,1 +1,2 @@
-echo "123" > 123.txt
+#!/bin/sh
+echo 123

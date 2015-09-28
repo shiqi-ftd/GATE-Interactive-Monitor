@@ -13,18 +13,19 @@
 		String simutype;
 		String unixCommand;
 	    Runtime r = Runtime.getRuntime();
-
 		try {
 			simutype = request.getParameter("simutype");
 			System.out.print(simutype);
 			System.setSecurityManager(null);
 			if ((simutype.equals("Cylindrical"))) {
-				unixCommand = "sh /Users/ShiqiZhong/Desktop/GATE-Interactive-Monitor/WebContent/conf/Cylindrical/test.sh";
-				Process p = r.exec(unixCommand);
+/* 				unixCommand = "/bin/sh /Users/ShiqiZhong/Desktop/GATE-Interactive-Monitor/WebContent/conf/Cylindrical/config_starter.sh";
+ */				
+ 				unixCommand = "java -jar /Users/ShiqiZhong/Desktop/shtest.jar";
+ 				Process p = r.exec(unixCommand);
 				System.out.println("Finished.");
 			}
 			if ((simutype.equals("Gamma"))) {
-				unixCommand = "sh /Users/ShiqiZhong/Desktop/GATE-Interactive-Monitor/WebContent/conf/Gamma/config_starter.sh";
+				unixCommand = "/bin/sh /Users/ShiqiZhong/Desktop/GATE-Interactive-Monitor/WebContent/conf/Gamma/config_starter.sh";
 	    		Process p = r.exec(unixCommand);
 				System.out.println("Finished.");
 			}
