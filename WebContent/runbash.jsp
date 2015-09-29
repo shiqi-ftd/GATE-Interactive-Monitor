@@ -20,7 +20,7 @@
 			if ((simutype.equals("Cylindrical"))) {
 /* 				unixCommand = "/bin/sh /Users/ShiqiZhong/Desktop/GATE-Interactive-Monitor/WebContent/conf/Cylindrical/config_starter.sh";
  */				
- 				unixCommand = "java -jar /Users/ShiqiZhong/Desktop/shtest.jar";
+ 				unixCommand = "sudo java -jar /Users/ShiqiZhong/Desktop/shtest.jar";
  				Process p = r.exec(unixCommand);
 				System.out.println("Finished.");
 			}

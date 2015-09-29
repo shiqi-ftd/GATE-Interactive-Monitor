@@ -1,0 +1,8 @@
+Give permission to the jar/bash file so that they can be executed with sudo without asking passwd.
+
+Step:
+1. root
+2. visudo
+3. ALL    ALL = (root) NOPASSWD: /Users/ShiqiZhong/Desktop/GATE-Interactive-Monitor/WebContent/conf/Cylindrical/config_starter.sh
+ALL ALL=(root) NOPASSWD: /usr/bin/java -jar /Users/ShiqiZhong/Desktop/shtest.jar
+
